@@ -107,7 +107,6 @@ var margin = function(elem, val) {
   return digits[elem].margin || 0;
 };
 
-
 // Makes the movement. This is done by "digitImages" steps.
 var moveDigit = function(elem, options) {
   if (digits[elem].current == 0) {
