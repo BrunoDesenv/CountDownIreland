@@ -1,32 +1,28 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Irlanda</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="js/jquery.countdown.js"></script>
-    <link href="css/media.css" rel="stylesheet" type="text/css" />
-    
-    <script>
-      $(function(){
-        $(".digits").countdown({
-          image: "img/digits.png",
-          format: "dd:hh:mm:ss",
-          timerEnd: function() { 
-              alert('Viajar!!'); 
-            }, 
-          endTime: new Date(2018, 5, 15)
-        });
-      });
-    </script>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Irlanda</title>
+<link rel="stylesheet" href="css/jquery.countdown.css">
+<style type="text/css">
+#defaultCountdown { width: 240px; height: 45px; }
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/jquery.plugin.min.js"></script>
+<script src="js/jquery.countdown.js"></script>
+<script>
+$(function () {
+	var austDay = new Date();
+	austDay = new Date(2018, 05, 18);
+	$('#defaultCountdown').countdown({until: austDay});
+	$('#year').text(austDay.getFullYear());
+});
+</script>
+</head>
+<body>
 
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="cell">
-        <div id="holder">
-          <div class="digits"></div>
-        </div>
-      </div>
-    </div>
-  </body>
+<p>Tempo restante até a ida para a Irlanda.</p>
+<div id="defaultCountdown"></div>
+
+</body>
 </html>
